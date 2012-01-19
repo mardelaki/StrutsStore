@@ -1,0 +1,13 @@
+Tο τέταρτο project μας ζητήθηκε να υλοποιηθεί χρησιμοποιώντας Sruts2.
+Δημιούργησα από την αρχή το shopping Cart του τρίτου project ώστε να χρησιμοποιεί αυτό το Framework και τα tag libraries που προσφέρει ο Apache για αυτό.
+Τα struts2 χρησιμοποιούν Action classes για να υλοποιήσουν τη λειτουργικότητα που απαιτείται.
+Το πιο action class θα χρησιμοποιηθεί και ποιες μέθοδοί του θα καλεστούν ανάλογα με τη περίπτωση είναι δηλωμένο σε ένα επιπλέον configuration file που είναι απαραίτητο για τη σωστή λειτουργία του Framework( το struts.xml).
+Στην αρχή καλείται η μέθοδος populate η οποία δίνει τις αρχικές τιμές στο basket.Εάν υπάρχουν cookies παίρνει τις τιμές από εκεί.
+Σε δεύτερο επίπεδο καλείται η execute η οποία κάνει όλους τους υπολογισμούς και ενημερώνει τα cookies ανάλογα.
+Για τη σωστή λειτουργία και για πρόσβαση στο Session η action class κάνει implement διάφορους interceptors των struts2 όπως το SessionAware.
+
+Ώς αναφορά χρησιμοποίησα κυρίως το βιβλίο Struts2 in Action και τα site του apache το http://struts.apache.org/2.2.3/docs/using-struts-2-tags.html και http://struts.apache.org/2.0.12/docs/tag-reference.html
+
+Ο κώδικας βρίσκεται και στο Github : https://github.com/mardelaki/
+
+URL:http://texwww.inf.uth.gr:8080/~delimpal/
