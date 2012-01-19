@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebApp_9" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>Struts2 Application</display-name>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+
+			org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>NewFile.jsp</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<param-name>Cafe</param-name>
+		<param-value>18.50</param-value>
+	</context-param>
+		<context-param>
+		<param-name>Sugar</param-name>
+		<param-value>6.95</param-value>
+	</context-param>
+		<context-param>
+		<param-name>Water</param-name>
+		<param-value>1.29</param-value>
+	</context-param>
+	<servlet>
+    <servlet-name>Redirector</servlet-name>
+    <servlet-class>my.pack.Redirector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Redirector</servlet-name>
+    <url-pattern>/Redirector.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetCode</servlet-name>
+    <servlet-class>my.pack.GetCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetCode</servlet-name>
+    <url-pattern>/GetCode.do</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>infoUrl</param-name>
+  <param-value>http://mardelaki.wordpress.com/</param-value>
+  </context-param>
+    <listener>
+  <listener-class>my.pack.MyListener</listener-class>
+  </listener>
+</web-app>
